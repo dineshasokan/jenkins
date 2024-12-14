@@ -1,12 +1,10 @@
 pipeline {
-  agent 'Built-In Node' {
-    docker {image 'node:12.16.2' }
-  }
+  agent 'Built-In Node'
   stages {
     stage('Test') {
       steps {
-        sh 'node --version'
-        sh 'npm install'
+        sh 'docker pull 'hello-world''
+        sh 'echo "This is new docker"'
       }
     }
   }

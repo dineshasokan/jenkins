@@ -3,8 +3,7 @@ pipeline {
   stages {
     stage('Test') {
       steps {
-       docker pull 'hello-world'
-       echo "This is new docker"
+       powershell 'docker pull hello-world'
       }
     }
   }

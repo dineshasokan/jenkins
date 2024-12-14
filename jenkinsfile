@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('Test') {
       steps {
-       powershell 'docker pull hello-world; echo"this is new OSELABS image"'
+       powershell 'docker pull docker/getting-started'
+       powershell 'docker run -d  docker/getting-started'
       }
     }
   }

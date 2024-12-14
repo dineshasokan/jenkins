@@ -1,11 +1,15 @@
 pipeline {
   agent any
   stages {
-    stage('Test') {
+    stage('Docker image pull') {
       steps {
        powershell 'docker pull docker/getting-started'
+      }
+    }
+    stage('Docker Run Container') {
+      steps {
        powershell 'docker run -d  docker/getting-started'
       }
     }
-  }
+   }
 }
